@@ -6,9 +6,8 @@
 
 **Snippets, validación e IntelliSense para temas de VTEX IO Store Framework.**
 
-[![marketplace](https://img.shields.io/visual-studio-marketplace/v/commenteme.vtex-io-intellisense?label=marketplace&labelColor=005278&color=FFBD38)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
-[![instalaciones](https://img.shields.io/visual-studio-marketplace/i/commenteme.vtex-io-intellisense?label=instalaciones&labelColor=005278&color=FFBD38)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
-[![licencia](https://img.shields.io/github/license/zeluizr/vtex-io-snippets?label=licencia&labelColor=005278&color=FFBD38)](./LICENSE)
+[![versión](https://img.shields.io/github/package-json/v/commentemeapp/vtex-io-snippets/main?label=versi%C3%B3n&labelColor=005278&color=FFBD38)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
+[![licencia](https://img.shields.io/github/license/commentemeapp/vtex-io-snippets?label=licencia&labelColor=005278&color=FFBD38)](./LICENSE)
 
 ## Instalación
 
