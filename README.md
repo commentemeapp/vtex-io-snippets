@@ -130,8 +130,8 @@ npx --yes @vscode/vsce package --no-dependencies   # genera el .vsix
 **Lo generado nunca se edita a mano.** Los snippets y el JSON Schema salen de `data/blocks.json` con un generador
 determinista, y la CI falla si lo commiteado no es exactamente lo que produce.
 
-**Ramas y publicación.** El trabajo sale de `dev` y llega por pull request; `dev → qa → main` por merge de la rama
-entera. Una tag `v*` en `main` empaqueta el `.vsix` y lo adjunta a la Release de GitHub. La publicación en el
+**Ramas y publicación.** El trabajo sale de `dev` y llega por pull request; `dev → main` por merge de la rama
+entera (sin `qa` desde el 30/10/2026). Una tag `v*` en `main` empaqueta el `.vsix` y lo adjunta a la Release de GitHub. La publicación en el
 Marketplace es manual, desde `main`, con `npx @vscode/vsce publish --no-dependencies`: sube la versión en
 `package.json` y cierra el `CHANGELOG.md` antes, porque el Marketplace rechaza una versión repetida.
 
@@ -142,4 +142,4 @@ Conventional Commits, rama desde `dev` y PR contra `dev`; mira [CONTRIBUTING.md]
 
 ---
 
-Hecho por [commente.me](https://commente.me) · hola@commente.me
+Hecho por [commente.me](https://www.commente.me) · hablecon@commente.me
