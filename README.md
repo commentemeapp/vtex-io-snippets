@@ -6,9 +6,8 @@
 
 **Snippets, validación e IntelliSense para temas de VTEX IO Store Framework.**
 
-[![marketplace](https://img.shields.io/visual-studio-marketplace/v/commenteme.vtex-io-intellisense?label=marketplace&labelColor=005278&color=FFBD38)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
-[![instalaciones](https://img.shields.io/visual-studio-marketplace/i/commenteme.vtex-io-intellisense?label=instalaciones&labelColor=005278&color=FFBD38)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
-[![licencia](https://img.shields.io/github/license/zeluizr/vtex-io-snippets?label=licencia&labelColor=005278&color=FFBD38)](./LICENSE)
+[![versión](https://img.shields.io/github/package-json/v/commentemeapp/vtex-io-snippets/main?label=versi%C3%B3n&labelColor=005278&color=FFBD38)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
+[![licencia](https://img.shields.io/github/license/commentemeapp/vtex-io-snippets?label=licencia&labelColor=005278&color=FFBD38)](./LICENSE)
 
 ## Instalación
 
@@ -45,7 +44,7 @@ de una lista fija.
 
 ## Documentación
 
-La documentación detallada de cada función está en la [wiki](https://github.com/zeluizr/vtex-io-snippets/wiki). El
+La documentación detallada de cada función está en la [wiki](https://github.com/commentemeapp/vtex-io-snippets/wiki). El
 identificador publicado sigue siendo `commenteme.vtex-io-intellisense`, aunque el nombre visible sea Snippets for
 VTEX IO.
 
@@ -115,7 +114,7 @@ JavaScript puro, sin TypeScript y sin build: el `main` es `extension.js`, tipado
 2 espacios, sin punto y coma y con comillas simples. Sin dependencias de runtime.
 
 ```bash
-git clone https://github.com/zeluizr/vtex-io-snippets.git
+git clone https://github.com/commentemeapp/vtex-io-snippets.git
 cd vtex-io-snippets
 npm install
 
