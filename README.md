@@ -1,13 +1,12 @@
-<p align="center">
-  <img src="assets/banner.png" width="100%" alt="Snippets for VTEX IO · Snippets, validación e IntelliSense para temas de VTEX IO Store Framework.">
-</p>
+![Snippets for VTEX IO · Snippets, validación e IntelliSense para temas de VTEX IO Store Framework.](.github/assets/banner.png)
 
 # Snippets for VTEX IO
 
 **Snippets, validación e IntelliSense para temas de VTEX IO Store Framework.**
 
-[![versión](https://img.shields.io/github/package-json/v/commentemeapp/vtex-io-snippets/main?label=versi%C3%B3n&labelColor=005278&color=FFBD38)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
-[![licencia](https://img.shields.io/github/license/commentemeapp/vtex-io-snippets?label=licencia&labelColor=005278&color=FFBD38)](./LICENSE)
+[![versión](https://badgen.net/vs-marketplace/v/commenteme.vtex-io-intellisense?color=005278)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
+[![instalaciones](https://badgen.net/vs-marketplace/i/commenteme.vtex-io-intellisense)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
+[![licencia](https://badgen.net/github/license/commentemeapp/vtex-io-snippets)](./LICENSE)
 
 ## Instalación
 
@@ -38,7 +37,7 @@ entra con sus props; dentro de `children` te sugiere los ids de bloque que ya ex
 ## Por que existe
 
 Todo lo que sugiere sale de un solo catálogo, [data/blocks.json](data/blocks.json), y nada de lo publicado se edita a
-mano: los snippets y el JSON Schema salen del mismo archivo, y la CI falla si lo commiteado no es exactamente lo que
+mano: los snippets y el JSON Schema salen del mismo archivo, y los tests fallan si lo commiteado no es exactamente lo que
 produce el generador. Las sugerencias cambian según el lugar del cursor, y las variables CSS salen de tus tokens, no
 de una lista fija.
 
@@ -128,10 +127,10 @@ npx --yes @vscode/vsce package --no-dependencies   # genera el .vsix
 `F5` en VS Code abre una ventana de desarrollo con la extensión cargada.
 
 **Lo generado nunca se edita a mano.** Los snippets y el JSON Schema salen de `data/blocks.json` con un generador
-determinista, y la CI falla si lo commiteado no es exactamente lo que produce.
+determinista, y los tests fallan si lo commiteado no es exactamente lo que produce.
 
 **Ramas y publicación.** El trabajo sale de `dev` y llega por pull request; `dev → main` por merge de la rama
-entera (sin `qa` desde el 30/10/2026). Una tag `v*` en `main` empaqueta el `.vsix` y lo adjunta a la Release de GitHub. La publicación en el
+entera (sin `qa` desde el 30/10/2026). No hay CI en GitHub: los tests corren en local antes de cada merge. La publicación en el
 Marketplace es manual, desde `main`, con `npx @vscode/vsce publish --no-dependencies`: sube la versión en
 `package.json` y cierra el `CHANGELOG.md` antes, porque el Marketplace rechaza una versión repetida.
 
@@ -140,6 +139,4 @@ Marketplace es manual, desde `main`, con `npx @vscode/vsce publish --no-dependen
 Conventional Commits, rama desde `dev` y PR contra `dev`; mira [CONTRIBUTING.md](CONTRIBUTING.md).
 [MIT](./LICENSE).
 
----
-
-Hecho por [commente.me](https://www.commente.me) · hablecon@commente.me
+_Hecho con amor y café por [zeluizr](https://github.com/zeluizr) y con la ayuda de [Claude](https://claude.ai/referral/Cz_UimA0NQ) ☕_
