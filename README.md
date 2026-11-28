@@ -4,29 +4,25 @@
 
 **Snippets, validación e IntelliSense para temas de VTEX IO Store Framework.**
 
-[![versión](https://badgen.net/vs-marketplace/v/commenteme.vtex-io-intellisense?color=005278)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
-[![instalaciones](https://badgen.net/vs-marketplace/i/commenteme.vtex-io-intellisense)](https://marketplace.visualstudio.com/items?itemName=commenteme.vtex-io-intellisense)
-[![licencia](https://badgen.net/github/license/commentemeapp/vtex-io-snippets)](./LICENSE)
+Versión 5.1.1 · estable. Cambios en [CHANGELOG.md](CHANGELOG.md).
 
 ## Instalación
 
-En Quick Open de VS Code (`Cmd/Ctrl + P`):
-
-```
-ext install commenteme.vtex-io-intellisense
+```bash
+code --install-extension commenteme.vtex-io-intellisense
 ```
 
-Desde el terminal, `code --install-extension commenteme.vtex-io-intellisense`. En el Marketplace aparece como
-**«Snippets for VTEX IO»**. Requiere VS Code `>= 1.60.0`.
+O en Quick Open de VS Code (`Cmd/Ctrl + P`): `ext install commenteme.vtex-io-intellisense`. En el Marketplace aparece como
+**«Snippets for VTEX IO»**.
 
-## Uso rápido
+## Uso
 
 Abre un `store/blocks/*.jsonc` de tu tema y escribe el nombre de un bloque, por ejemplo `flex-layout.row`. El snippet
 entra con sus props; dentro de `children` te sugiere los ids de bloque que ya existen en el tema.
 
 ![Autocompletado de ids de bloque y validación de props en store/blocks/home.jsonc](images/preview.png)
 
-## Que incluye
+### Que incluye
 
 - **Snippets de bloques y props**: 385 bloques del Store Framework, con los enums de cada prop.
 - **Validación mientras escribes**: `store/blocks`, rutas y contentSchemas contra un JSON Schema.
@@ -34,14 +30,14 @@ entra con sus props; dentro de `children` te sugiere los ids de bloque que ya ex
 - **Variables CSS del VTEX Style**: autocompletado de `var(--...)` con los tokens de tu tema.
 - **Comando `VTEX: Gerar tokens.css`**: exporta un `:root { ... }` con todas las variables.
 
-## Por que existe
+### Por que existe
 
 Todo lo que sugiere sale de un solo catálogo, [data/blocks.json](data/blocks.json), y nada de lo publicado se edita a
 mano: los snippets y el JSON Schema salen del mismo archivo, y los tests fallan si lo commiteado no es exactamente lo que
 produce el generador. Las sugerencias cambian según el lugar del cursor, y las variables CSS salen de tus tokens, no
 de una lista fija.
 
-## Documentación
+### Documentación
 
 La documentación detallada de cada función está en la [wiki](https://github.com/commentemeapp/vtex-io-snippets/wiki). El
 identificador publicado sigue siendo `commenteme.vtex-io-intellisense`, aunque el nombre visible sea Snippets for
@@ -92,22 +88,12 @@ la raíz del archivo. Dentro de `props` es intencional: ahí solo caben propieda
 **Usaba el tema Puelche.** El tema de color, los iconos y los ajustes de confort salieron de esta extensión en la
 5.0.0 y van a publicarse como una extensión aparte. Hasta entonces, VS Code vuelve a su tema y sus iconos por defecto.
 
-### Estructura
+## Requisitos
 
-```
-.
-├── extension.js       # activate()/deactivate(), providers y comandos
-├── lib/               # lógica pura, sin la API vscode (testeable con node:test)
-├── data/blocks.json   # catálogo de bloques del Store Framework (fuente de todo lo generado)
-├── snippets/          # .code-snippets (generado desde data/blocks.json)
-├── schemas/           # JSON Schema de los bloques (generado)
-├── assets/            # tokens.json del VTEX Style por defecto y header del README
-├── images/            # ícono (PNG y SVG) e imagen del README
-├── scripts/           # generadores: schema, cobertura, ícono e imagen del README
-└── test/              # node:test
-```
+- VS Code `>= 1.60.0`.
+- Un tema de VTEX IO Store Framework (archivos bajo `store/`).
 
-### Desarrollo
+## Desarrollo
 
 JavaScript puro, sin TypeScript y sin build: el `main` es `extension.js`, tipado con JSDoc y `// @ts-check`. CommonJS,
 2 espacios, sin punto y coma y con comillas simples. Sin dependencias de runtime.
@@ -134,9 +120,29 @@ entera (sin `qa` desde el 30/10/2026). No hay CI en GitHub: los tests corren en 
 Marketplace es manual, desde `main`, con `npx @vscode/vsce publish --no-dependencies`: sube la versión en
 `package.json` y cierra el `CHANGELOG.md` antes, porque el Marketplace rechaza una versión repetida.
 
-## Contribuir · Licencia
+**Contribuir.** Conventional Commits, rama desde `dev` y PR contra `dev`; mira [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Conventional Commits, rama desde `dev` y PR contra `dev`; mira [CONTRIBUTING.md](CONTRIBUTING.md).
+## Estructura
+
+```
+.
+├── extension.js       # activate()/deactivate(), providers y comandos
+├── lib/               # lógica pura, sin la API vscode (testeable con node:test)
+├── data/blocks.json   # catálogo de bloques del Store Framework (fuente de todo lo generado)
+├── snippets/          # .code-snippets (generado desde data/blocks.json)
+├── schemas/           # JSON Schema de los bloques (generado)
+├── assets/            # tokens.json del VTEX Style por defecto y el banner antiguo, que leen las versiones ya publicadas
+├── images/            # ícono (PNG y SVG) e imagen del README
+├── scripts/           # generadores: schema, cobertura, ícono e imagen del README
+└── test/              # node:test
+```
+
+## Licencia
+
 [MIT](./LICENSE).
+
+Contacto: hablecon@commente.me
+
+---
 
 _Hecho con amor y café por [zeluizr](https://github.com/zeluizr) y con la ayuda de [Claude](https://claude.ai/referral/Cz_UimA0NQ) ☕_
